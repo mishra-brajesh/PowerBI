@@ -1,0 +1,52 @@
+Power BI Transformation:
+	1.Bins(Bins size and No. of Bins)
+	2.Combine Mutiple table
+	3.Cluster
+	4.Format Date
+	5.Groups(List or Bins)
+	6.Hierarchies
+	7.Joins
+	8.Pivot and UnPivot Table
+	9.Query Group
+	10.Query Group
+	11.Split Column
+
+Visulization:
+	12.Area Chart
+	13.Bar Chart or Horizontal Bar Chart
+	14.Card
+	15.Clustered Bar Chart4
+	16.Column Chart
+	17.Donut Chart
+	18.Funnel Chart
+	19.Heat Map
+	20.Line Chart
+	21.CLustered Col and Line Chart
+	22.Line and Stacked Column Chart
+	23.Matrix
+	24.Muti-Row Card
+	25.Pie Chart
+	26.Ribbon Chart
+	27.Stacked Area Chart
+	28.Scatter Chart
+	29.Stacked Bar Chart
+	30.Stacked Column Chart
+	31.Table
+	32.Tree Map
+	33.Walterfall Chart
+	34.100% Stacked Bar Chart
+	35.100% Stacked Column Chart
+	36.Map
+	37.Filled Map	
+
+
+Filter:
+	1. Slicer
+	2. Visual level filter(Filter on dimension, Basic Filter, Advance Filter, Top N Filter,Filters on Measures)
+	6. Page level Filters(apply to all the visuals present in the page)
+	7. Report level filters(apply to all the pages that are present in current report)
+	8. Drill through filter(use to drill through particular region)
+
+
+Practice:
+https://www.imf.org/external/pubs/ft/weo/2020/01/weodata/index.aspx

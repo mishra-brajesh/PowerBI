@@ -1,0 +1,300 @@
+Power Bi: https://powerbi.microsoft.com/en-us/
+
+Power BI Toolset: Power BI Desktop, power BI service, Power BI mobile, power Bi Gateway
+
+Power Bi Desktop:
+Data Model:first window that pop up when you start the power BI.
+	Fields	:	Tables are refered as fields, available on  right side of data model 
+		Right Click on fields:
+			Report:
+				Check:	To select the col 
+				New Hierarchy:Used to create a drill down and up facility(either by drag and drop in fields on to another fields or by right click New hierarchy option )
+				New Measure:
+				New Column:
+				New Quick Measure:
+				Rename:
+				Delete:
+				Hide:
+				View Hidden:
+				Unhide all:
+				Collapse all:
+				Expand all:
+				New Group:	A window will pop up that have following options available:	
+						Name: Specify the Power BI Bin name
+						Field: Field or Column that you used for binning
+						Group Type: 
+								Bins(Numerical col only):
+								List(this can be used when some fields are not peforming well then we can group them in one group):											Make the group after selecting diff values or rest other values would be in one group
+						Bin Type: There are two option:	By dafult it will calculate the values of bin size and display it ,based on option you 										select if you want to edit you can do that :
+									Size of Bins	:Size of bucket(number of values to be there in a bucket)
+									Number of Bins	(Size of bin automatically get calculated): we want to divide the numerical col 
+											into specified number of buckets ex: like for 1 to 100 : 4 bucket(Number of 												bucket) is 1-25,26-50,51-75,76-100
+						Min and Max Value: Minimum and maximum value present in the selected Fields.
+			
+						ex :if min is 1 and max is 10 and there are 5 records only with 1,3,5,10,7
+							bin size:	5 then 1,3,5 would be in a bucket and 7,10 in second bucket(it will display bucket number)								No. of bins:	2 then bin size get automatially calculated and result would be same as above 1 to 5 beloong to 									1st bukcet and 6- to 10 in second bukcet	
+
+						
+				Add to Filter
+				Add to Drill through
+			Data:
+			Relationship:
+		
+	Ribbons:
+		Report:
+			File:
+			Home:
+				Get Data: Connect to different data surces
+					Load: Load the data from the selected source directly to data model.
+					Transform: To perform some data preparation step using power query editor window use transform data
+					Select Related Tables: 	if we have mutiple tables within data source, we can use to automatic select all the related table just 								by clicking one table.
+					Connect to SQL server:
+						Server Name:
+						Database Name(Optional):
+						Connectivity Mode: select either of two
+							Import :import all the database objects availabe in server 
+							Direct Query: we have to pass data basese name and sql query in advance option
+				Refresh: To update & load data from data source again.	
+
+			Insert:
+			Modeling:
+				Manage Relationship
+				New measure
+				Quick Measure
+				New Column(Calculated column): using existing col and applying DAX on that col
+				New Table
+				Change detection
+				New parameter
+				Manage roles
+				View As
+				Q&A Support
+				Langauge
+				Linguistic schema
+
+			View:
+			Help:
+		Data:
+			File:
+			Home:
+				Using DAX:
+					Calculated mearsure:this will crate a new object under fields with default name as Measure(we can change the name of measure in 					formula bar)
+					Calculated columns: create a col using existing data(using DAX(Data Analysis Expression language)) 
+					Calculated Table: create a Table using existing data(using DAX(Data Analysis Expression language)) 
+			Help:
+			Table Tools:
+		Relationship:
+			File:
+			Home:
+			Help:
+	Add New Pages	(click on plus sign available right side of list of page, bottom)
+	Rename the Pages(either by right click or double click on page name), 
+	Hide		(Must have mutiple pages to hide one of them , right click check the hide option to hide and unchecked the hide option to unhide page) 
+	Duplicate Pages	( Right click and select duplicate option)  		
+	Delete Pages	(Must have mutiple pages to delete one of them , right click check the delete option to delete or click on the cross option avaible on right 				corner of page name) 
+
+
+Notes:
+1. we can crate cluster using auto detct cluster in power BI.
+2. Format Dates in power BI:	1. (After selecting the col that have date or time or datetime in it and it will update the same col) either by right click(Transform) 				    on col name or by Transform Tab in power query editor.
+				2. To add another col use the Add column(Date, Time and Duration option) tab in power query editor window
+3. To add the fields in hirarchy that was createdearlier or to change the levels of hierarchy, we can do either by right click , add to hierarchy option or by drag and drop  
+		
+			
+Power Query Editor:
+	Queries:Tables are refered as Queries, available on  left side of power query editor window.
+	Save: we can use save in power query editor to save the data seprately for data model or power query editor(It will not load data to data model)
+	Ribbons:
+		Home:
+			Apply: It will load the changes made in power query editor window to data model.
+			Close: close the power query editor don't apply the changes to data model(it will pop up the warning if we have something updated in power 				query editor that is not present in data model)
+			Apply and close: Load the changes to data model and close the power query editor.
+
+			New source : connect to new data source
+			Recent source: connect to data source have previously connected
+			Enter data: Make a table in power Bi itself
+	
+			Replace: Replace a value by other value for a selected col.
+			Append:(Same as unioun in sql) To append the rows of mutile table use Append(must have same no. of col and data type or can be convertable to 					first table data type)
+			Merge or Merage as New(merage as new create a another table ):(Merge is same as join in sql)-Inner, left,right,full, leftonly, rightonly
+							Select the matching col of both the table before hitting ok 
+				Note:
+					when we merge or append a table it will show a col with table as values on clicking on that it will show the respective table 					values so clicking on right side of that col name , we can inclde only col that we want or we can also apply the aggregate 					function in those col
+
+			Use first row as header: self explainatory
+			User header as first row: self explainatory
+			Choose columns: select the column we want to load to data model.
+			Go to column: go and select specific col(search by name)
+			Remove col: after selecting the col click on it , it will remove the col from table or we can select mutiple col using ctrl and then press del 					key or by right click on col name.
+			Remove other col: remove other col then the selected one col
+			Keep top row:how many number of rows from top of the table want to keep and delete the rest of them
+			Keep bottom row:how many number of rows from bottom of the table want to keep and delete the rest of them
+			Keep range of row: keep the range of rows(First row(index) or number of rows) and delete the rest of them
+			Keep duplicate: keep the record(row) have similar value in selected col 
+			Remove top row: how many number of rows from top of the table want to delete
+			Remove bottom row: how many number of rows from bottom of the table want to delete
+			Remove alternate rows:first row to remove(Start index of row), number of rows to remove(from start index to how many number of rows want to 						delete) , number of row to keep(after removing number of specified row, how many rows we have keep):::----these 3 part wil be 					repeated untill we traverse through all the data 
+			Remove duplicate: delete the record(whole row) if selected col have any duplicate values
+			Remove blank row: delete the record if there is no data in any col. 
+			Split Col: split the col values based on various condition
+			Data Type: change the data type of selected col or by right click or by clicking on left side of col name(on top of abc or etc is there before the col name )
+
+
+		Transform:
+			Group By:
+			Use First row as header or use header as first row:
+			Transpose:
+			Reverse rows:
+			count rows:
+			Data type:
+			Detect Data type:
+			Rename:
+			Replace:
+			Fill:
+			Pivot column: convert col of a table into header and other col value should be adjust accordingly to convert col with aggregate function.
+				Remember, having more than one unchanged static column will not make any difference in creating a pivot table.
+			
+			Unpivot column or unpivot only selected col or unpivot other column:
+			Move:
+			
+			
+		Add Col:
+			Add column from example
+			Custom column: It can be used to create a col from existing data by applying a custom formula on exisitng column
+			Invoke custom function
+			conditional column: Add a column based on condtion on existing column
+			index column
+			duplicate column
+			format
+			merge column
+			extract
+			parse
+			statistics
+			standard
+			scientific
+			trigonometry
+			rounding 
+			information
+			date
+			time
+			duration
+			text analytics
+			vision
+			azure machine learning
+			
+			
+		View:
+		Tools:
+		Help:
+	
+
+
+
+
+Notes:
+1. Power BI allows to drill through time-based data by default. When you add a date field in your analysis and enable drill on your data visualization(Enable the drill feature using the option at the top left of visualizations .), it takes you to the next level of time-based data.
+2.power Bi files save as .pbix extension
+3. In power query editor window there is line below col. name that represent the percentage of clean data in that col(on hover the mouse on line we can see details)
+4. By default power Bi exclude the null values.
+5. If there is dependecy of a table on some other table then we can't delete that table, it will pop up the message.
+6. we can reoder the columns by simply drag or by right click.
+7. (Folder have tables)To create a New query group, right-click on the empty space under the queries section and select the New Group option from the context menu.
+   and we can drag and drop the query in that group or by right click and selecting the group name move to group.
+   and we can also create nested hierarchy of these groups 
+
+
+Visulisation:
+
+	1. Area Chart(area under line Chart or x-axis):
+	2. Bar Chart or Horizontal Bar Chart:
+	3. Card(Use to display a single number):we can change the function acc to our requirement.
+	4. Clustered Bar Chart(bar chart with legend): it will create mutiple bar based on legend for single value of x-axis.
+	5. Column Chart
+	6. Dount Chart(Similar to pie chart)  
+	7. Funnel Chart
+	8. Heat Map(Create a Matrix and edit it's properties using conditionla column)	
+	9. Line Chart
+	10.Line and Clustered COlumn Chart
+	11.Line and stacked column chart
+	12.Matrix
+	13.Multi-row card
+	14.Pie chart
+	15.Ribbon chart(create a clustered col chart then click on ribbon chart)
+
+	16.Tree Map: Power BI Treemap is used to display the data in Rectangle Boxes. You can define the rectangle box using any Dimension column, and its size by Measure value.
+		
+Notes:
+1. we can sort the graph by diff value using 3 dot on right corner of graph.
+2. we can add diff values col to compare the diff value against each other.
+3. Tooltip: when we hover over the graph it will show the details about the graph, we can edit it.
+4. ColourSaturation can be used to rep graph in low to high scale in terms of colour.
+
+
+
+Filter:
+	1. Slicer: Used to add filters to the canvas or to display filters on the report canvas.`
+	2. Visual level filter(Filter on dimension, Basic Filter, 
+	  			Advance Filter:
+						The following are the list of options that are available for Power BI Advanced filtering
+						1.Show Items when the Value: Please select the wildcard that you want to use.
+							The following are the list of options available under the Show items when the value section:
+
+									1. Contains: When this property is selected, it checks each record against the Match Value. And if it contains the match value at any position then, the record displayed.
+									2. Does not Contains: It checks each record against the Match Value. And if it does not contains the match value at any position then, the record displayed.
+									3. Starts With: If the record starts with the match value, then the record displayed.
+									4. Does not start with: If the record does not start with the match value, then the record displayed.
+									5. is: If the record matches exactly with the match value, then the record displayed.
+									6. is not: If the record is not exactly equal to the match value, then the record displayed.
+									7. is blank: This option displays all the records with the blank values.
+									8. is not blank: It displays all the records that contain no blank values.
+						2.Empty Text box: Please specify the wildcard character or expression. For example, it starts with s.
+						3.And and Or: Same as AND and OR Operators in SQL. Use this to concatenate multiple wildcard searches.
+						4.Empty drop down list: Please select the second wildcard that you want to use.
+						5.Empty Text box: Please specify the character or expression for the second wildcard.
+				Top N Filter
+						The following are the list of options that are available for Power BI TOP 10 filters
+
+						1. Show Items: Top filter selected by default. However, you can change this to Bottom by clicking the down arrow.
+						2. Empty Text box: Please specify any integer value — for example, 10 means, top 10 records.
+						3. By Value: You have to drag and drop the required Measure value present in the Fields. Top N filter use this Measure to find Top 10 and Bottom 10 records.
+				Filters on Measures:
+						1. Show Items when the Value: Please select the operator that you want to use.
+								The following are the list of options available under the Show items when the value section:
+
+									1. is less than: When this option is selected, it checks each record against the Value. And if it is less than the user-specified value, then the record displayed.
+									2. is less than or equal to: If it is less than or equal to the given value, then the record displayed.
+									3. is greater than: Displays the records whose sales amount is greater than the specified value
+									4. is greater than or equal to: Displays the records whose sales amount is greater than or equal to a given value.
+									5. is: If the record matches exactly with the value, then the record display.
+									6. is not: If the record is not equal to the value, then the record display.
+									7. is blank: It displays all the records with the blank values.
+									8. is not blank: It displays all the records that contain no blank values.
+						2. Empty Text box: Please specify the value.
+						3. And and Or: Same as AND and OR Operators in SQL. Use this to concatenate multiple filters.
+						4. Empty drop down list: Please select the second operator that you want to use.
+						5. Empty Text box: Please specify the value for the second filter.
+
+	6. Page level Filters(apply to all the visuals present in the page)
+	7. Report level filters(apply to all the pages that are present in current report)
+	8. Drill through filter(use to drill through particular region) 
+
+
+Notes:
+1. we can edit the slicer properties to select mutiple value at a time.
+
+
+
+DAX Introduction:DAX (Data Analysis Expressions)
+	DAX is also known as function language, where the full code is kept inside a function.	
+	DAX programming formula contains two data types: Numeric and Other. Numeric includes - integers, currency and decimals, while Other includes: string and binary object.
+	In Power BI, you can create two primary calculations using DAX −
+		1.	Calculated columns: listed above 
+		2. 	Calculated measures: listed above
+	
+	DAX Functions
+		1.	Aggregate: MIN, MAX, Average, SUM, SUMX
+		2.	Text: REPLACE, SEARCH, UPPER, FIXED, CONCATENATE
+		3.	Date: DATE, HOUR, WEEKDAY, NOW, EOMONTH
+		4.	Logical:AND, OR, NOT, IF, IFERROR
+		5.	Counting:DISTINCTCOUNT, COUNT, COUNTA, COUNTROWS, COUNTBLANK
+		6.	Information: ISBLANK, ISNUMBER, ISTEXT, ISNONTEXT, ISERROR
+
