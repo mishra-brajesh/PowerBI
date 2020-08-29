@@ -6,7 +6,7 @@ Power BI Transformation:
 	5.Groups(List or Bins)
 	6.Hierarchies
 	7.Joins
-	8.Pivot and UnPivot Table
+	8.Pivot and UnPivot Table 
 	9.Query Group
 	10.Query Group
 	11.Split Column
